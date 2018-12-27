@@ -10,9 +10,11 @@ class About extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-md-6 m-auto text-center">
-                <h1>About Us</h1>
-                <p>"If you do what you love, it is the best way to relax."</p>
-                <cite>--Christian Louboutin</cite>
+                <div className="about-dark-overlay">
+                  <h1>About Us</h1>
+                  <p>"If you do what you love, it is the best way to relax."</p>
+                  <cite>~Christian Louboutin</cite>
+                </div>
               </div>
             </div>
           </div>

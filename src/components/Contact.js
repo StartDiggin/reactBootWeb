@@ -1,19 +1,26 @@
 import React from "react";
 import Footer from "./Footer";
-import Person1 from "../img/person1.jpg";
-import Person2 from "../img/person2.jpg";
-import Person3 from "../img/person3.jpg";
-import Person4 from "../img/person4.jpg";
+import Person1 from "../img/sara.jpg";
+import Person2 from "../img/kerry.jpg";
+import Person3 from "../img/oscar.jpg";
+import Person4 from "../img/johnny.jpg";
 
 class Contact extends React.Component {
   render() {
     return (
       <div className="contact">
-        <header id="page-header">
+        <header id="contact-page-header">
           <div className="container">
             <div className="row">
               <div className="col-md-6 m-auto text-center">
-                <h1>Contact Us</h1>
+                <div className="contact-dark-overlay">
+                  <h1>Contact Us</h1>
+                  <p>
+                    "Good communication is just as stimulating as black coffee,
+                    and just as hard to sleep after."
+                  </p>
+                  <cite>~Anne Morrow Lindbergh</cite>
+                </div>
               </div>
             </div>
           </div>
@@ -26,7 +33,9 @@ class Contact extends React.Component {
                 <div className="card p-4">
                   <div className="card-body">
                     <h4>Get In Touch</h4>
-                    <p>Contact us for a free consult! </p>
+                    <p>
+                      <u>Contact us for a free consult! </u>
+                    </p>
                     <p>
                       Please submit any questions you may have and we will get
                       back to you with 24 hours!! Thank you!
@@ -126,8 +135,8 @@ class Contact extends React.Component {
                   alt="staff"
                   className="img-fluid rounded-circle mb-2"
                 />
-                <h4>Jane Doe</h4>
-                <small>Marketing Manager</small>
+                <h4>Sara Espinoza</h4>
+                <small>IT Security Consultant</small>
               </div>
               <div className="col-md-3">
                 <img
@@ -135,8 +144,8 @@ class Contact extends React.Component {
                   alt="staff"
                   className="img-fluid rounded-circle mb-2"
                 />
-                <h4>Jane Doe</h4>
-                <small>Marketing Manager</small>
+                <h4>Kerry Stotz</h4>
+                <small>Web Designer</small>
               </div>
               <div className="col-md-3">
                 <img
@@ -144,8 +153,8 @@ class Contact extends React.Component {
                   alt="staff"
                   className="img-fluid rounded-circle mb-2"
                 />
-                <h4>Jane Doe</h4>
-                <small>Marketing Manager</small>
+                <h4>Oscar Martinez</h4>
+                <small>Social Media</small>
               </div>
               <div className="col-md-3">
                 <img
@@ -153,8 +162,8 @@ class Contact extends React.Component {
                   alt="staff"
                   className="img-fluid rounded-circle mb-2"
                 />
-                <h4>Jane Doe</h4>
-                <small>Marketing Manager</small>
+                <h4>Johnny Gonzales</h4>
+                <small>Web Developer</small>
               </div>
             </div>
           </div>

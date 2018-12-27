@@ -1,11 +1,6 @@
 import React from "react";
 
 class Header extends React.Component {
-  // clicked = e => {
-  //   e.preventDefault();
-  //   e.currentTarget.classList.add("active");
-  // };
-
   render() {
     return (
       <div className="header">
@@ -23,22 +18,42 @@ class Header extends React.Component {
             </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item active" onClick={this.clicked}>
-                  <a href="/" className="nav-link" id="home">
+                <li
+                  className="nav-item active"
+                  id="home"
+                  data-key="home"
+                  onClick={this.clicked}
+                >
+                  <a href="/" className="nav-link">
                     Home
                   </a>
                 </li>
-                <li className="nav-item" onClick={this.clicked}>
+                <li
+                  className="nav-item"
+                  id="about"
+                  data-key="about"
+                  onClick={this.clicked}
+                >
                   <a href="/about" className="nav-link" id="about">
                     About Us
                   </a>
                 </li>
-                <li className="nav-item" onClick={this.clicked}>
+                <li
+                  className="nav-item"
+                  id="services"
+                  data-key="services"
+                  onClick={this.clicked}
+                >
                   <a href="/services" className="nav-link" id="services">
                     Services
                   </a>
                 </li>
-                <li className="nav-item" onClick={this.clicked}>
+                <li
+                  className="nav-item"
+                  id="contact"
+                  data-key="contact"
+                  onClick={this.clicked}
+                >
                   <a href="/contact" className="nav-link" id="contact">
                     Contact
                   </a>
