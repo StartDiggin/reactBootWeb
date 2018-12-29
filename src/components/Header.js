@@ -7,7 +7,7 @@ class Header extends React.Component {
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
           <div className="container">
             <a href="index.html" className="navbar-brand">
-              JGDesign
+              InteleSite
             </a>
             <button
               className="navbar-toggler"
