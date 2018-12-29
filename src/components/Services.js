@@ -39,7 +39,8 @@ class Services extends React.Component {
                     </p>
                     <ul className="list-group">
                       <li className="list-group-item">
-                        <i className="fas fa-check" /> Includes up to 6 pages
+                        <i className="fas fa-check" /> Includes up to 6 themed
+                        pages
                       </li>
                       <li className="list-group-item">
                         <i className="fas fa-check" /> Professional Responsive
@@ -88,11 +89,13 @@ class Services extends React.Component {
                   </div>
                   <div className="card-body">
                     <h4 className="card-title">$999.00</h4>
-                    <p className="card-text">Premium Plan includes:</p>
+                    <p className="card-text">
+                      Premium Plan includes Basic Plan plus:
+                    </p>
                     <ul className="list-group">
                       <li className="list-group-item">
-                        <i className="fas fa-check" /> Includes up to 12 pages
-                        and all of the Basic plan
+                        <i className="fas fa-check" /> Includes up to 12 themed
+                        pages
                       </li>
                       <li className="list-group-item">
                         <i className="fas fa-check" /> Keyword Research for

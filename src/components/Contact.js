@@ -4,8 +4,62 @@ import Person1 from "../img/sara.jpg";
 import Person2 from "../img/kerry.jpg";
 import Person3 from "../img/oscar.jpg";
 import Person4 from "../img/johnny.jpg";
+// Import Firebase
+import firebase from "firebase/app";
+import "firebase/firebase-app";
+import "firebase/firebase-database";
+
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBToN6djlTrSii7iv_rn151xIPVc5Tspgw",
+  authDomain: "intelesite.firebaseapp.com",
+  databaseURL: "https://intelesite.firebaseio.com",
+  projectId: "intelesite",
+  storageBucket: "intelesite.appspot.com",
+  messagingSenderId: "463857988197"
+};
+firebase.initializeApp(config);
 
 class Contact extends React.Component {
+  state = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: ""
+  };
+
+  change = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  saveMessage = () => {
+    var messageRef = firebase.database().ref("messages");
+    var newMessageRef = messageRef.push();
+    var { firstName, lastName, email, phone, message } = { ...this.state };
+    newMessageRef.set({
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      phone: phone,
+      message: message
+    });
+  };
+
+  onsubmit = e => {
+    e.preventDefault();
+    this.saveMessage();
+    this.setState({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
+  };
+
   render() {
     return (
       <div className="contact">
@@ -56,66 +110,85 @@ class Contact extends React.Component {
                       Please fill out this form to contact us
                     </h3>
                     <hr />
-                    <div className="row">
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="First Name"
-                          />
+                    <form>
+                      <div className="row">
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <input
+                              type="text"
+                              name="firstName"
+                              value={this.state.firstName}
+                              className="form-control"
+                              placeholder="First Name"
+                              onChange={e => this.change(e)}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <input
+                              type="text"
+                              name="lastName"
+                              value={this.state.lastName}
+                              className="form-control"
+                              placeholder="Last Name"
+                              onChange={e => this.change(e)}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <input
+                              type="text"
+                              name="email"
+                              value={this.state.email}
+                              className="form-control"
+                              placeholder="Email"
+                              onChange={e => this.change(e)}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <input
+                              type="number"
+                              name="phone"
+                              value={this.state.phone}
+                              className="form-control"
+                              placeholder="Phone Number"
+                              onChange={e => this.change(e)}
+                            />
+                          </div>
                         </div>
                       </div>
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Last Name"
-                          />
+                      <div className="row">
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <textarea
+                              type="text"
+                              name="message"
+                              value={this.state.message}
+                              className="form-control"
+                              placeholder="Message"
+                              onChange={e => this.change(e)}
+                            />
+                          </div>
                         </div>
                       </div>
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Email"
-                          />
+                      <div className="row">
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <input
+                              type="submit"
+                              value="submit"
+                              onClick={e => this.onsubmit(e)}
+                              name="contactForm"
+                              className="btn btn-ouline-danger btn-block"
+                            />
+                          </div>
                         </div>
                       </div>
-                      <div className="col-md-6">
-                        <div className="form-group">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="form-group">
-                          <textarea
-                            type="text"
-                            className="form-control"
-                            placeholder="Message"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="form-group">
-                          <input
-                            type="submit"
-                            value="submit"
-                            className="btn btn-ouline-danger btn-block"
-                          />
-                        </div>
-                      </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>
