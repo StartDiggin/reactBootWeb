@@ -40,7 +40,7 @@ class Home extends React.Component {
           <div className="dark-overlay">
             <div className="col">
               <div className="container pt-5">
-                <h1>Did you answer yes to any of the questions above?</h1>
+                <h3>Did you answer yes to any of the questions above?</h3>
                 <a href="/contact" className="btn btn-primary">
                   Free Consult!
                 </a>
