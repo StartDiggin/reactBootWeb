@@ -11,12 +11,12 @@ import "firebase/firebase-database";
 
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyBToN6djlTrSii7iv_rn151xIPVc5Tspgw",
-  authDomain: "intelesite.firebaseapp.com",
-  databaseURL: "https://intelesite.firebaseio.com",
-  projectId: "intelesite",
-  storageBucket: "intelesite.appspot.com",
-  messagingSenderId: "463857988197"
+  apiKey: "AIzaSyA1InzcdJiKu1gAwhCanyL8pTDKYszRzGI",
+  authDomain: "intelesite-2d7d4.firebaseapp.com",
+  databaseURL: "https://intelesite-2d7d4.firebaseio.com",
+  projectId: "intelesite-2d7d4",
+  storageBucket: "intelesite-2d7d4.appspot.com",
+  messagingSenderId: "104424154392"
 };
 firebase.initializeApp(config);
 
